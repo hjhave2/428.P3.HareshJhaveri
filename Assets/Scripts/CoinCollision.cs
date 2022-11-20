@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CoinCollision : MonoBehaviour
 {
-    public AudioSource ding;
     public GameObject obj1;
     public GameObject obj2;
     public GameObject obj3;
@@ -19,7 +18,7 @@ public class CoinCollision : MonoBehaviour
     {
         if(collision.collider.gameObject.tag == "Coin")
         {
-            Destroy(collision.collider.gameObject);
+            collision.collider.gameObject.SetActive(false);
             yield return new WaitForEndOfFrame();
             switch(curObj)
             {
@@ -37,7 +36,6 @@ public class CoinCollision : MonoBehaviour
                     break;
             }
             curObj = (curObj+1) % 4;
-            ding.Play();
         }
     }
 }
