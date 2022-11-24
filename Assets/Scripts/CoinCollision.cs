@@ -23,16 +23,20 @@ public class CoinCollision : MonoBehaviour
             switch(curObj)
             {
                 case 0:
-                    obj1.transform.position = new Vector3(0,1.5f,-0.5f);
+                    obj1.transform.rotation = Quaternion.identity;
+                    obj1.transform.position = new Vector3(-0.9f,0,2.8f);
                     break;
                 case 1:
-                    obj2.transform.position = new Vector3(0,1.5f,-0.5f);
+                    obj2.transform.rotation = Quaternion.identity;
+                    obj2.transform.position = new Vector3(-0.9f,0,2.8f);
                     break;
                 case 2:
-                    obj3.transform.position = new Vector3(0,1.5f,-0.5f);
+                    obj3.transform.rotation = Quaternion.identity;
+                    obj3.transform.position = new Vector3(-0.9f,0,2.8f);
                     break;
                 case 3:
-                    obj4.transform.position = new Vector3(0,1.5f,-0.5f);
+                    obj4.transform.rotation = Quaternion.identity;
+                    obj4.transform.position = new Vector3(-0.9f,0,2.8f);
                     break;
             }
             curObj = (curObj+1) % 4;
