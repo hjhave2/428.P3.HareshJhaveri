@@ -9,18 +9,15 @@ public class LeverCollision : MonoBehaviour
     public Material material1;
     public Material material2;
     public AudioSource audio;
-    public UnityEvent value;
 
-    void changeMaterial()
+    void changeMin()
     {
-        if(star.GetComponent<Renderer>().sharedMaterial == material1)
-        {
-            star.GetComponent<Renderer>().material = material2;
-        }
-        else
-        {
-            star.GetComponent<Renderer>().material = material1;
-        }
+        star.GetComponent<Renderer>().material = material2;
+        audio.Play();
+    }
+    void changeMax()
+    {
+        star.GetComponent<Renderer>().material = material1;
         audio.Play();
     }
 }
