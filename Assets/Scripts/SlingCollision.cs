@@ -11,6 +11,7 @@ public class SlingCollision : MonoBehaviour
     public float minZ;
     public float maxZ;
     public UnityEvent OnEnter;
+    public AudioSource launchAudio;
     void Start()
     {
 
@@ -28,5 +29,6 @@ public class SlingCollision : MonoBehaviour
             return;
         }
         OnEnter.Invoke();
+        launchAudio.Play();
     }
 }
